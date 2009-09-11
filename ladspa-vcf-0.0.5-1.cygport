@@ -6,7 +6,7 @@ SRC_DIR=${P#ladspa-}
 src_compile() {
 	lndirs
 	cd ${B}
-	cygmake
+	verbose ${CC} ${CFLAGS} -DWITH_CV_IN ${LDFLAGS} -shared -o vcf.so vcf.so.c
 }
 
 src_install() {

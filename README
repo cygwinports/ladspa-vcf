@@ -1,0 +1,46 @@
+ladspa-vcf
+------------------------------------------
+LADSPA plugins for audio EQ biquad filters based on the cookbook 
+formulae by Robert Bristow-Johnson.
+
+Runtime requirements:
+  cygwin-1.7.0-60
+  libgcc1-4.3.2-2
+
+Build requirements:
+  binutils-2.19.51-1
+  cygport-0.9.9-1
+  gcc4-core-4.3.2-2
+
+Canonical website:
+  http://www.suse.de/~mana/ladspa.html
+
+Canonical download:
+  http://www.suse.de/~mana/ladspa.html
+
+-------------------------------------------
+
+Build instructions:
+  unpack ladspa-vcf-0.0.5-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./ladspa-vcf-0.0.5-X.cygport all
+
+This will create:
+  /usr/src/ladspa-vcf-0.0.5-X-src.tar.bz2
+  /usr/src/ladspa-vcf-0.0.5-X.tar.bz2
+
+For a list of files included in the binary package, run from the 
+command-line: 'cygcheck -cd ladspa-vcf'.
+
+-------------------------------------------
+
+Port Notes:
+
+----- version 0.0.5-1 -----
+Initial release for Cygwin 1.7.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/
