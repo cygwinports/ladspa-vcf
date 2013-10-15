@@ -1,0 +1,21 @@
+NAME="ladspa-vcf"
+VERSION=0.0.5
+RELEASE=1
+CATEGORY="Audio"
+SUMMARY="LADSPA audio EQ biquad filters"
+DESCRIPTION="LADSPA plugins for audio EQ biquad filters based on the cookbook
+formulae by Robert Bristow-Johnson."
+HOMEPAGE="http://www.suse.de/~mana/ladspa.html"
+SRC_URI="http://www.suse.de/~mana/vcf-${VERSION}.tar.bz2"
+SRC_DIR="vcf-${VERSION}"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	verbose ${CC} ${CFLAGS} -DWITH_CV_IN ${LDFLAGS} -shared -o vcf.so vcf.so.c
+}
+
+src_install() {
+	exeinto /usr/lib/ladspa
+	doexe ${B}/*.so
+}

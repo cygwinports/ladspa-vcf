@@ -1,5 +1,0 @@
-category: Audio
-requires: libgcc1
-sdesc: "LADSPA audio EQ biquad filters"
-ldesc: "LADSPA plugins for audio EQ biquad filters based on the cookbook 
-formulae by Robert Bristow-Johnson."
